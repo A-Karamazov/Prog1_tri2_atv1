@@ -45,10 +45,6 @@ class TodoList{
     }
 }
 
-//
-const todolist = new TodoList('todos.json');
-todolist.addItem(new Item('buy alguma cooisa'));
-todolist.addItem(new Item('vender alguma cooisa'));
-todolist.addItem(new Item('fazer alguma cooisa'));
-todolist.removeItem(0);
-console.log(todolist.getItems());
+
+export default TodoList
+export { Item, TodoList }
