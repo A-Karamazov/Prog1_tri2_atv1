@@ -1,9 +1,3 @@
-/**
- * @todo
- * known issues:
- * - getItems needs to await loadListFromDisk()
- */
-
 // class Item_ { 
 //   public title: string
 //   constructor(title: string) {
@@ -61,6 +55,11 @@ class TodoList {
     const items = await this.items
     items.splice(index, 1)
     await this.saveListToDisk()
+  }
+
+  async loadListFromDisk() {
+    this.items = this.readListFromDisk()
+    await this.items
   }
 
   /**
